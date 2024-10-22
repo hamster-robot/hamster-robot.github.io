@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="description"
+content="Hamster: Hierarchical Action Models For Open-World Robot Manipulation">
+<meta name="keywords" content="Robotics, Transformer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamster: Hierarchical Action Models For Open-World Robot Manipulation</title>
+
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+rel="stylesheet">
+
+<link rel="stylesheet" href="./static/css/bulma.min.css">
+<link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+<link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="./static/css/index.css">
+<link rel="icon" href="./static/images/favicon.png">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="./static/js/fontawesome.all.min.js"></script>
+<script src="./static/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma-slider.min.js"></script>
+<script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="">
+		  TODO
+          </a>
+          <a class="navbar-item" href="">
+		  TODO
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Hamster: Hierarchical Action Models For Open-World Robot Manipulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+	      <a href=""></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          </div>
+
+
+          <div class="is-size-5 publication-authors">
+		<br>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+          <div class="is-size-5 publication-authors">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--/ Paper video. -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Summary</h2>
+	<p>
+	    <figure>
+	    <a href="./figs/method.png"><img src="./figs/method.png"></a>
+	    </figure>
+        </p>
+        <div class="content has-text-justified">
+         <p> </p>
+          <p>
+	  Large models have shown strong open-world generalization to complex problems in vision and language, but they have been relatively more difficult to deploy in robotics. This challenge stems from several factors, the foremost of which is the lack of scalable robotic training data since this requires expensive on-robot collection. For scalable training, these models must show considerable transfer across domains, to make use of cheaply available "off-domain" data such as videos, hand-drawn sketches, or data from simulation. In this work, we posit that hierarchical vision-language-action models can be more effective at transferring behavior across domains than standard monolithic vision-language-action models. In particular, we study a class of hierarchical vision-language-action models, where high-level vision-language models (VLMs) are trained on relatively cheap data to produce semantically meaningful intermediate predictions such as 2D paths indicating desired behavior. These predicted 2D paths can serve as guidance for low-level control policies that are 3D-aware and capable of precise manipulation. In this work, we show that separating prediction into semantic high-level predictions, and 3D-aware low-level predictions allows such hierarchical VLA policies to transfer across significant domain gaps, for instance from simulation to the real world or across scenes with widely varying visual appearance. Doing so allows for the usage of cheap, abundant data sources beyond teleoperated on-robot data thereby enabling broad semantic and visual generalization. We demonstrate how hierarchical architectures trained on this type of cheap off-domain data can enable robotic manipulation with semantic, visual, and geometric generalization through experiments in simulation and the real world.
+         </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Experiment</h2>
+    </div>
+    <br>
+
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_0_have_the_r_in_the_left_cup.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_0_pick_up_the_left_object_and_put_it_in_the_left_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_0_pick_up_the_r_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_0_push_down_the_drink.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_1_pick_up_the_garlic_and_put_it_in_the_pan.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_1_pick_up_the_middle_object_and_put_it_in_the_left_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_1_push_down_the_object_on_the_left.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_1_the_goal_is_to_have_the_e_in_the_right_cup.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_2_pick_up_the_energy_bar_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_3_pick_up_the_smile_face_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_3_press_the_right_red_button.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_4_i_want_the_yellow_button_being_pressed.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_4_pick_up_the_middle_object_and_put_it_in_the_right_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_4_pick_up_the_mouse_and_put_it_in_the_white_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_5_pick_up_the_right_object_and_put_it_in_the_right_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/ep_6_pick_up_the_green_pepper_and_put_it_in_the_red_bowl__1_.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Based on the awesome open source template <a
+              href="https://github.com/nerfies/nerfies.github.io">from here.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

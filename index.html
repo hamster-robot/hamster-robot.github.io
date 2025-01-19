@@ -203,56 +203,206 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h2 class="title is-2">Experiments and Results</h2>
-  </div>
-  <div class="content has-text-centered">
-    <br>
-    <h5 class="title is-5">
-    We separate results into a variety of sections demonstrating various capabilities of HAMSTER below:
-    </h5>
+    </div>
+    <div class="content has-text-centered">
+      <img src="figs/overall_results.png">
+      <br>
+      <h6 class="title is-6">
+        Overall results: HAMSTER outperforms OpenVLA and 3D imitation learning (RVT2, 3DDA) policies in generalization to new task variations.
+      We separate results into a variety of sections demonstrating various capabilities of HAMSTER below:
+      </h6>
+    </div>
   </div>
   <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Long Horizon Task Generalization</h3>
+    </div>
   </div>
+  <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Off Domain Data</h3>
-    <p>TODO: show images of the off domain data and the table demonstrating sim2real helps (also hand data)</p>
+    <h3 class="title is-3">Off Domain Data VLM Fine-tuning helps with Path Generation</h3>
+    <br>
+    </div>
   </div>
+    <div class="container is-max-desktop is-centered">
+      <h5 class="title is-5">RLBench Simulation Data helps with path generation of real-world tasks similar to those in the off-domain dataset.</hf>
+      <img src="figs/simulation_helps_hamster.png">
+      </div>
+      <br>
+      <br>
+    <div class="container is-max-desktop is-centered">
+      <h5 class="title is-5">Comparison to RT-Trajectory which uses a pre-trained VLM to generate paths w/o fine-tuning. Fine-tuning on off-domain data to generate paths performs better! </h5>
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>VLM</th>
+              <th>Finetuning Data</th>
+              <th>Average Human Rank (lower is better)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RT-Traj. (Gu et al. 2023)</td>
+              <td>0-shot GPT-4o</td>
+              <td>-</td>
+              <td>3.47</td>
+            </tr>
+            <tr>
+              <td>RT-Traj. (Gu et al. 2023)</td>
+              <td>Code as Policies GPT-4o (Liang et al. 2022)</td>
+              <td>-</td>
+              <td>3.41</td>
+            </tr>
+            <tr>
+              <td>HAMSTER (ours)</td>
+              <td>VILA (Lin et al. 2023)</td>
+              <td>Our off-domain data $ \tilde{\mathcal{D}}_\text{off} $ without simulated RLBench</td>
+              <td>2.13</td>
+            </tr>
+            <tr>
+              <td>HAMSTER (ours)</td>
+              <td>VILA (Lin et al. 2023)</td>
+              <td>Our off-domain data $ \tilde{\mathcal{D}}_\text{off} $</td>
+              <td><b>1.40</b></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>
+          Ranking-based human evaluation of different VLMs, averaged across various real-world evaluation tasks. Results indicate that HAMSTER (ours), including simulation data, is most effective since it captures both spatial and semantic information across diverse tasks from RLBench. This significantly outperforms zero-shot VLM-based trajectory generation, as described in Gu et al. (2023).
+        </p>
+    <br>
+  <h5 class="title is-5">Fine-tuning the VLM on paths automatically generated from human hand data.</h5>
+  <div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/hand_tracking_example.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <p><b>TODO:</b> fill in with an example image of video of block stacking</p>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+        <source src="figs/TODO" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+
+    </div>
+
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">3D Aware Tasks</h3>
+    </div>
+    <h5 class="title is-5">HAMSTER's VLM can reason about 3D spatial relationships (top, middle, bottom) just from RGB input:</h5>
+    <img src="figs/3d_reasoning_image.jpg">
+
+  <h5 class="title is-5">The 3D low-level policy can reason about various heights depending on the objects, <i>despite being conditioned on identical paths!</i></h5>
+  <div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=5">
+        <source src="figs/3d_vid_1.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
   </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=5">
+        <source src="figs/3d_vid_2.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=5">
+        <source src="figs/3d_vid_3.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+</div>
+  </div>
+  <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Dexterous and Non-Prehensile</h3>
+    </div>
+
+  <h5 class="title is-5">HAMSTER can perform dexterous and non-prehensile tasks.</i></h5>
+  <div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/dexterous_1_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
   </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/dexterous_2.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column">
+      <div class="content">
+        <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+          <source src="figs/dexterous_3.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        </video>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+          <source src="figs/dexterous_4.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+        </video>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Retaining Base VLM Capabilities</h3>
+    </div>
   </div>
+  <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Inference Speed</h3>
+    </div>
   </div>
+  <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Comparison against OpenVLA Pre-Trained with Our Sim Data</h3>
+    </div>
   </div>
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Comparison to RT-Trajectory (Off-the-shelf Paths)</h3>
-  </div>
+  <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Prompt Robustness</h3>
+    </div>
   </div>
+  <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Different Low Level Policies?</h3>
+    </div>
   </div>
-
+  <br>
+<div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h3 class="title is-3">Additional Experiment Videos</h3>
+    </div>
 <div class="columns is-centered">
   <div class="column">
     <div class="content">
@@ -381,7 +531,23 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     </div>
   </div>
 </div>
-
+  </div>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX (TODO: Fill in after acceptance)</h2>
+      <pre><code>
+@inproceedings{
+    anonymous2024hamster,
+    title={{HAMSTER}: Hierarchical Action Models for Open-World Robot Manipulation},
+    author={Anonymous},
+    booktitle={Submitted to The Thirteenth International Conference on Learning Representations},
+    year={2024},
+    url={https://openreview.net/forum?id=h7aQxzKbq6},
+    note={under review}
+  }
+  </code></pre>
+    </div>
+  </section>
 
 <footer class="footer">
   <div class="container">

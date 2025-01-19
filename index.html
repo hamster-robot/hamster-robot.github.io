@@ -405,14 +405,14 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
       </thead>
       <tbody>
         <tr>
-          <td width="50%; vertical-align; top"><b>Original Prompt</b>: In the image, please execute the command described in &lt;quest&gt;move the coke to Taylor Swift&lt;/quest&gt;.  
+          <td width="70%; vertical-align; top"><b>Original Prompt</b>: In the image, please execute the command described in &lt;quest&gt;move the coke to Taylor Swift&lt;/quest&gt;.  
             Provide a sequence of points denoting the trajectory of a robot gripper to achieve the goal.  
             Format your answer as a list of tuples enclosed by &lt;ans&gt; and &lt;/ans&gt; tags. For example:  
             &lt;ans&gt;[(0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, (0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, ...]&lt;/ans&gt;  
             The tuple denotes point x and y location of the end effector of the gripper in the image. The action tags indicate the gripper action.  
             The coordinates should be floats ranging between 0 and 1, indicating the relative locations of the points in the image.
             </td>
-          <td style="width: 50%; text-align: center;">
+          <td style="width: 30%; text-align: center;">
             <img src="figs/prompt_robustness_1.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
           </td>
         </tr>
@@ -424,7 +424,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
             The tuple denotes point x and y location of the end effector of the gripper in the image. The action tags indicate the gripper action.  
             The coordinates should be floats ranging between 0 and 1, indicating the relative locations of the points in the image.  
             </td>
-          <td style="width: 50%; text-align: center;">
+          <td style="width: 30%; text-align: center;">
             <img src="figs/prompt_robustness_2.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
           </td>
         </tr>
@@ -435,7 +435,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
             &lt;ans&gt;[(0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, (0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, ...]&lt;/ans&gt;  
             <b>Each</b> tuple <b>should</b> denote the x and y coordinates of the gripper’s end-effector as floating-point values ranging from 0 to 1, <b>representing</b> relative positions in the image. <b>Actions like opening or closing the gripper should be indicated within &lt;action&gt; tags.</b>
           </td>
-          <td style="width: 50%; text-align: center;">
+          <td style="width: 30%; text-align: center;">
             <img src="figs/prompt_robustness_3.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
           </td>
         </tr>
@@ -446,7 +446,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
             &lt;ans&gt;[(0.74, 0.21), &lt;action&gt;Close Gripper&lt;/action&gt;, (0.25, 0.32), (0.32, 0.17), (0.13, 0.24), &lt;action&gt;Open Gripper&lt;/action&gt;, ...]</b>&lt;/ans&gt;  
             <b>Each</b> tuple <b>should</b> denote the x and y coordinates of the gripper’s end-effector as floating-point values ranging from 0 to 1, <b>representing</b> relative positions in the image. <b>Actions like opening or closing the gripper should be indicated within &lt;action&gt; tags.</b>
           </td>
-          <td style="width: 50%; text-align: center;">
+          <td style="width: 30%; text-align: center;">
             <img src="figs/prompt_robustness_4.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
           </td>
         </tr>

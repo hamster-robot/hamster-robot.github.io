@@ -194,6 +194,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
       <br>
       <b>Visual generalization comes from the fine-tuned VLM; expert low-level control comes from the separate low-level 3D policy.</b>
     </p>
+  <hr>
   </div>
 
 </section>
@@ -218,6 +219,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Long Horizon Task Generalization</h3>
     </div>
+  <hr>
   </div>
   <br>
   <div class="container is-max-desktop">
@@ -227,13 +229,13 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     </div>
   </div>
     <div class="container is-max-desktop is-centered">
-      <h5 class="title is-5">RLBench Simulation Data helps with path generation of real-world tasks similar to those in the off-domain dataset.</hf>
+      <h6 class="title is-6">RLBench Simulation Data helps with path generation of real-world tasks similar to those in the off-domain dataset.</h6>
       <img src="figs/simulation_helps_hamster.png">
       </div>
       <br>
       <br>
     <div class="container is-max-desktop is-centered">
-      <h5 class="title is-5">Comparison to RT-Trajectory which uses a pre-trained VLM to generate paths w/o fine-tuning. Fine-tuning on off-domain data to generate paths performs better! </h5>
+      <h5 class="title is-6">Comparison to RT-Trajectory which uses a pre-trained VLM to generate paths w/o fine-tuning. Fine-tuning on off-domain data to generate paths performs better! </h5>
         <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
           <thead>
             <tr>
@@ -275,7 +277,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
           Ranking-based human evaluation of different VLMs, averaged across various real-world evaluation tasks. Results indicate that HAMSTER (ours), including simulation data, is most effective since it captures both spatial and semantic information across diverse tasks from RLBench. This significantly outperforms zero-shot VLM-based trajectory generation, as described in Gu et al. (2023).
         </p>
     <br>
-  <h5 class="title is-5">Fine-tuning the VLM on paths automatically generated from human hand data.</h5>
+  <h5 class="title is-6">Fine-tuning the VLM on paths automatically generated from human hand data.</h5>
   <div class="columns is-centered">
   <div class="column">
     <div class="content">
@@ -294,16 +296,17 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   </div>
 </div>
 
+  <hr>
     </div>
 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">3D Aware Tasks</h3>
     </div>
-    <h5 class="title is-5">HAMSTER's VLM can reason about 3D spatial relationships (top, middle, bottom) just from RGB input:</h5>
+    <h5 class="title is-6">HAMSTER's VLM can reason about 3D spatial relationships (top, middle, bottom) just from RGB input:</h5>
     <img src="figs/3d_reasoning_image.jpg">
 
-  <h5 class="title is-5">The 3D low-level policy can reason about various heights depending on the objects, <i>despite being conditioned on identical paths!</i></h5>
+  <h5 class="title is-6">The 3D low-level policy can reason about various heights depending on the objects, <i>despite being conditioned on identical paths!</i></h5>
   <div class="columns is-centered">
   <div class="column">
     <div class="content">
@@ -327,6 +330,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     </div>
   </div>
 </div>
+  <hr>
   </div>
   <br>
   <div class="container is-max-desktop">
@@ -334,7 +338,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <h3 class="title is-3">Dexterous and Non-Prehensile</h3>
     </div>
 
-  <h5 class="title is-5">HAMSTER can perform dexterous and non-prehensile tasks.</i></h5>
+  <h5 class="title is-6">HAMSTER can perform dexterous and non-prehensile tasks.</i></h5>
   <div class="columns is-centered">
   <div class="column">
     <div class="content">
@@ -367,6 +371,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
       </div>
     </div>
   </div>
+  <hr>
   </div>
   <br>
   <div class="container is-max-desktop">
@@ -374,19 +379,21 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <h3 class="title is-3">Retaining Base VLM Capabilities</h3>
     </div>
 
-    <h5 class="title is-5">Despite fine-tuning HAMSTER still retains base VLM capabilities. For example, HAMSTER's VLM can generalize to new views:</h5>
+    <h5 class="title is-6">Despite fine-tuning HAMSTER still retains base VLM capabilities. For example, HAMSTER's VLM can generalize to new views:</h5>
 
     <div class="columns is-centered has-text-centered">
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" width="70%" onloadstart="this.playbackRate=1">
         <source src="figs/new_view_generalization_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
     </div>
+  <hr>
   </div>
   <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Inference Speed</h3>
     </div>
+  <hr>
   </div>
   <br>
   <div class="container is-max-desktop">
@@ -400,7 +407,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <h3 class="title is-3">Prompt Robustness</h3>
     </div>
 
-    <h5 class="title is-5">Below we demonstrate the HAMSTER's VLM path generation is robust to various input prompts. The first row contains the original prompt HAMSTER was trained with,
+    <h5 class="title is-6">Below we demonstrate the HAMSTER's VLM path generation is robust to various input prompts. The first row contains the original prompt HAMSTER was trained with,
       and all subsequent rows contain new prompts with changes bolded.
     </h5>
 
@@ -474,12 +481,14 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     
 
 
+  <hr>
   </div>
   <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Different Low Level Policies?</h3>
     </div>
+  <hr>
   </div>
   <br>
 <div class="container is-max-desktop">

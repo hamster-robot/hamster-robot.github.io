@@ -478,12 +478,12 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     </div>
   </div>
   <br>
-  <div class="container is-max-desktop">
+  <!--<div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Inference Speed</h3>
     </div>
   </div>
-  <br>
+  <br>-->
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Comparison against OpenVLA Pre-Trained with Our Sim Data</h3>
@@ -575,6 +575,39 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">HAMSTER Works with Different Low-Level Policies</h3>
     </div>
+        <table class="table is-bordered is-narrow is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Policy</th>
+              <th>Averaged Success Rate (New Tasks)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RVT2 (Goyal et al. 2024)</td>
+              <td>22.11</td>
+            </tr>
+            <tr>
+              <td>HAMSTER + RVT2 </td>
+              <td><b>66.56</b></td>
+            </tr>
+            <tr style="border-bottom:3px solid black">
+            </tr>
+            <tr>
+              <td>3D-DA (Ke et al. 2024)</td>
+              <td>16.70</td>
+            </tr>
+            <tr>
+              <td>HAMSTER + 3D-DA (Ke et al. 2024)</td>
+              <td><b>72.55</b></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>
+          Human evaluation shows HAMSTER, with simulation data, excels in capturing spatial and semantic info across tasks, outperforming zero-shot VLM-based trajectory generation (Gu et al., 2023).
+        </p>
+
   </div>
   <br>
 <div class="container is-max-desktop">

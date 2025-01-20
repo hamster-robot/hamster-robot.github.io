@@ -213,12 +213,110 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
       We separate results into a variety of sections demonstrating various capabilities of HAMSTER below:
       </h6>
     </div>
+    <hr>
   </div>
   <br>
+
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Long Horizon Task Generalization</h3>
+    <h3 class="title is-3">Semantic Generalization</h3>
     </div>
+
+  <div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/semantic_generalization_1.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Put the M on Mona Lisa; Put the E on Einstein</b></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/semantic_generalization_2.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Put the coke can on Jensen Huang</b></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/semantic_generalization_3.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+      <p><b>Task: Put the S block on the plate pointed to by the arrow</b></p>
+    </div>
+  </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column">
+      <div class="content">
+        <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+          <source src="figs/ep_2_pick_up_the_energy_bar_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+        </video>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+          <source src="figs/ep_3_pick_up_the_smile_face_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+        </video>
+      </div>
+    </div>
+  </div>
+    <hr>
+  <br>
+    </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+    <h3 class="title is-3">Robustness to Clutter</h3>
+    </div>
+    <div class="columns is-centered">
+    
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+            <source src="figs/ep_6_pick_up_the_green_pepper_and_put_it_in_the_red_bowl__1_.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
+            <source src="figs/ep_1_pick_up_the_garlic_and_put_it_in_the_pan.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+  <br>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+    <h3 class="title is-3">Long Horizon, Uninterrupted Task Execution</h3>
+    </div>
+
+  <div class="columns is-centered">
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/long_horizon_1_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="figs/long_horizon_2_small.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+      </video>
+    </div>
+  </div>
+  </div>
+
   <hr>
   </div>
   <br>
@@ -274,7 +372,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
         </table>
         
         <p>
-          Ranking-based human evaluation of different VLMs, averaged across various real-world evaluation tasks. Results indicate that HAMSTER (ours), including simulation data, is most effective since it captures both spatial and semantic information across diverse tasks from RLBench. This significantly outperforms zero-shot VLM-based trajectory generation, as described in Gu et al. (2023).
+          Human evaluation shows HAMSTER, with simulation data, excels in capturing spatial and semantic info across tasks, outperforming zero-shot VLM-based trajectory generation (Gu et al., 2023).
         </p>
     <br>
   <h5 class="title is-6">Fine-tuning the VLM on paths automatically generated from human hand data.</h5>
@@ -306,13 +404,14 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <h5 class="title is-6">HAMSTER's VLM can reason about 3D spatial relationships (top, middle, bottom) just from RGB input:</h5>
     <img src="figs/3d_reasoning_image.jpg">
 
-  <h5 class="title is-6">The 3D low-level policy can reason about various heights depending on the objects, <i>despite being conditioned on identical paths!</i></h5>
+  <h5 class="title is-6">The 3D low-level policy can reason about various heights depending on the objects, <i>despite being conditioned on identical paths!</i> All 3 videos below are conditioned on the same path despite the objects being different</h5>
   <div class="columns is-centered">
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" onloadstart="this.playbackRate=5">
         <source src="figs/3d_vid_1.mp4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
+      <p>The low-level policy successfully puts the grapes into the white bowl.</p>
     </div>
   </div>
   <div class="column">
@@ -320,6 +419,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=5">
         <source src="figs/3d_vid_2.mp4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
+      <p>The low-level 3D policy reasons about the different height of the milk carton to put it into the white bowl.</p>
     </div>
   </div>
   <div class="column">
@@ -327,6 +427,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=5">
         <source src="figs/3d_vid_3.mp4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
+      <p>The 3D policy reasons about the different height of the red mug to successfully put the grapes into it.</p>
     </div>
   </div>
 </div>
@@ -389,13 +490,13 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <hr>
   </div>
   <br>
-  <div class="container is-max-desktop">
+  <!--<div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Inference Speed</h3>
     </div>
   <hr>
   </div>
-  <br>
+  <br>-->
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Comparison against OpenVLA Pre-Trained with Our Sim Data</h3>
@@ -486,8 +587,41 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Different Low Level Policies?</h3>
+    <h3 class="title is-3">HAMSTER Works with Different Low-Level Policies</h3>
     </div>
+        <table class="table is-bordered is-narrow is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Policy</th>
+              <th>Averaged Success Rate (New Tasks)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RVT2 (Goyal et al. 2024)</td>
+              <td>22.11</td>
+            </tr>
+            <tr>
+              <td>HAMSTER + RVT2 </td>
+              <td><b>66.56</b></td>
+            </tr>
+            <tr style="border-bottom:3px solid black">
+            </tr>
+            <tr>
+              <td>3D-DA (Ke et al. 2024)</td>
+              <td>16.70</td>
+            </tr>
+            <tr>
+              <td>HAMSTER + 3D-DA</td>
+              <td><b>72.55</b></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>
+          HAMSTER performs well with different low-level policies (RVT2, 3D-DA), and demonstrates a significant performance improvement compared to the base policy with both.
+         </p>
+
   <hr>
   </div>
   <br>
@@ -531,14 +665,15 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_1_pick_up_the_garlic_and_put_it_in_the_pan.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+        <source src="figs/ep_1_pick_up_the_middle_object_and_put_it_in_the_left_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
     </div>
   </div>
+
   <div class="column">
     <div class="content">
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_1_pick_up_the_middle_object_and_put_it_in_the_left_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
+        <source src="figs/ep_5_pick_up_the_right_object_and_put_it_in_the_right_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
     </div>
   </div>
@@ -555,22 +690,6 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <div class="content">
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
         <source src="figs/ep_1_the_goal_is_to_have_the_e_in_the_right_cup.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_2_pick_up_the_energy_bar_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_3_pick_up_the_smile_face_and_put_it_in_the_red_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
     </div>
   </div>
@@ -603,22 +722,6 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <div class="content">
       <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
         <source src="figs/ep_4_pick_up_the_mouse_and_put_it_in_the_white_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-</div>
-<div class="columns is-centered">
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_5_pick_up_the_right_object_and_put_it_in_the_right_bowl.MP4" type="video/mp4" class="figure-img img-fluid rounded">
-      </video>
-    </div>
-  </div>
-  <div class="column">
-    <div class="content">
-      <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=2">
-        <source src="figs/ep_6_pick_up_the_green_pepper_and_put_it_in_the_red_bowl__1_.MP4" type="video/mp4" class="figure-img img-fluid rounded">
       </video>
     </div>
   </div>

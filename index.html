@@ -188,7 +188,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
         <h2 class="title is-3">Summary</h2>
 	<p>
 	    <figure>
-	    <a href="./figs/method.png"><img src="./figs/method.png"></a>
+	    <img src="./figs/method.png">
 	    </figure>
         <div class="content has-text-justified">
 	  We propose a Hierarchical VLA architecture, <b>HAMSTER</b>, which can enable robotic manipulation with <b>semantic, visual, and geometric generalization</b> after being trained on easy to collect, <b>off-domain data</b>.
@@ -209,7 +209,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <div class="content has-text-justified">
     <h4 class="title is-5">1. VLM and Policy Training </h4>
     <figure>
-    <a href="./figs/hamster_training_fig.png"><img src="./figs/hamster_training_fig.png"></a>
+    <img src="./figs/hamster_training_fig.png">
     </figure>
     <p>
       <b>(a): </b>First, we fine-tune a pre-trained VLM on a large, general, off-domain dataset $ \tilde{\mathcal{D}}_\text{off} $ to produce <i>paths</i> and <i>points</i>.
@@ -221,7 +221,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     </p> 
   <h4 class="title is-5">2. Inference </h4>
     <figure>
-    <a href="./figs/hamster_inference_fig.png"><img src="./figs/hamster_inference_fig.png"></a>
+    <img src="./figs/hamster_inference_fig.png"></a>
     </figure>
     <p> At inference time, we use the VLM to predict paths for the first observation $o_1$ conditioned on the text instruction. 
       These paths are drawn onto all images that the policy sees, $\tilde{o}_t$, where it then executes low-level environment actions.
@@ -354,6 +354,15 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
   <hr>
   </div>
   <br>
+  
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+    <h3 class="title is-3">VLM Visual Generalization</h3>
+    <br>
+    </div>
+    <hr>
+  </div>
+
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Off Domain Data VLM Fine-tuning helps with Path Generation</h3>
@@ -535,15 +544,16 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
     <div class="columns is-centered has-text-centered">
     <h3 class="title is-3">Comparison against OpenVLA Pre-Trained with Our Sim Data</h3>
     </div>
+    <hr>
   </div>
   <br>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-    <h3 class="title is-3">Prompt Robustness</h3>
+    <h3 class="title is-3">HAMSTER is Robust to Different Prompts</h3>
     </div>
 
     <h5 class="title is-6">Below we demonstrate the HAMSTER's VLM path generation is robust to various input prompts. The first row contains the original prompt HAMSTER was trained with,
-      and all subsequent rows contain new prompts with changes bolded.
+      and second row contains new prompts with changes bolded.
     </h5>
 
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -566,7 +576,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
             <img src="figs/prompt_robustness_1.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
           </td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td>In the image, please execute the command described in &lt;quest&gt;<b>help me to have the coke on the Taylor Swift</b>&lt;/quest&gt;.  
             Provide a sequence of points denoting the trajectory of a robot gripper to achieve the goal.  
             Format your answer as a list of tuples enclosed by &lt;ans&gt; and &lt;/ans&gt; tags. For example:  
@@ -599,7 +609,7 @@ href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css
           <td style="width: 30%; text-align: center;">
             <img src="figs/prompt_robustness_4.png" style="max-width: 100%; height: auto;" alt="Prompt Image">
           </td>
-        </tr>
+        </tr> -->
         <tr>
           <td>
             In the <b>provided</b> image, <b>perform the task</b> described in &lt;quest&gt;<b>have the coke on the lady</b>&lt;/quest&gt;. <b>Generate</b> a sequence of points <b>representing</b> the trajectory of a robot gripper to <b>accomplish</b> the objective.  
